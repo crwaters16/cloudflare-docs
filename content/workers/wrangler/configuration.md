@@ -503,6 +503,36 @@ analytics_engine_datasets = [
 ]
 ```
 
+### mTLS Certificates
+
+To communicate with origins that require client authentication, a Worker can present a certificate for mTLS in subrequests. Wrangler provides the `mtls-certificate` [command](/workers/wrangler/commands#mtls-certificate) to upload and manage these certificates.
+
+To bind an mTLS certificate to your Worker, assign an array of objects with the following shape to the `mtls_certificates` key.
+
+{{<definitions>}}
+
+- `binding` {{<type>}}string{{</type>}} {{<prop-meta>}}required{{</prop-meta>}}
+
+  - The binding name used to refer to the certificate.
+
+- `certificate_id` {{<type>}}string{{</type>}} {{<prop-meta>}}required{{</prop-meta>}}
+
+  - The ID of the certificate. Wrangler displays this via the `mtls-certificate upload` and `mtls-certificate list` commands.
+
+{{</definitions>}}
+
+Example:
+
+```toml
+---
+header: wrangler.toml
+---
+mtls_certificates = [
+    { binding = "<BINDING_NAME>", certificate_id = "<CERTIFICATE_ID>" }
+]
+```
+
+
 ## Bundling
 
 You can bundle assets into your Worker using the `rules` key, making these assets available to be imported when your Worker is invoked. The `rules` key will be an array of the below object.
