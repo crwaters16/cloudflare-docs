@@ -13,7 +13,7 @@ By default, the [DNS server](https://www.cloudflare.com/learning/dns/what-is-dns
 
 You can also set up 1.1.1.1 for Families for an added layer of protection on your home network against malware and adult content. 1.1.1.1 for Families leverages Cloudflare's global network to ensure that it is fast and secure around the world, and includes the same [strong privacy guarantees](/1.1.1.1/privacy/public-dns-resolver/) that we committed to when we launched 1.1.1.1.
 
-## 1.1.1.1 for Families
+## 1.1.1.1 for Families wooo
 
 1.1.1.1 for Families categorizes destinations on the Internet based on the potential threat they pose regarding malware, phishing, or other types of security risks. When enabled, 1.1.1.1 for Families will block resolution to these destinations.
 
